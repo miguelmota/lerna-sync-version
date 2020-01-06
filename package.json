@@ -6,6 +6,7 @@
   "bin": {
     "lerna_sync_version": "bin/lerna_sync_version"
   },
+  "preferGlobal": true,
   "scripts": {
     "test": "echo 'todo'"
   },
