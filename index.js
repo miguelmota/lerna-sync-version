@@ -83,6 +83,6 @@ packages.forEach(pkg => {
   }
 
   packageJson.dependencies[syncPackageName] = newVersion
-  fs.writeFileSync(filepath, JSON.stringify(packageJson, null, 2))
+  fs.writeFileSync(filepath, `${JSON.stringify(packageJson, null, 2)}\n`)
   console.log(chalk.green(`UPDATED pkg ${pkg}:`.padEnd(30, '.'), `${oldVersion} => ${newVersion}`))
 })
