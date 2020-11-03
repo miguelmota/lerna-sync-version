@@ -72,6 +72,14 @@ packages.forEach(pkg => {
   }
 
   const packageJson = require(filepath)
+  if (!packageJson) {
+    return
+  }
+
+  if (!packageJson.dependencies) {
+    return
+  }
+
   if (!packageJson.dependencies[syncPackageName]) {
     return
   }
