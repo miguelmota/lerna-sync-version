@@ -40,7 +40,8 @@ let syncPackageJson = null
 const packagesDir = path.resolve(rootPath, 'packages')
 
 try {
-  const pkgDirname = syncPackageName.replace(/@[0-9a-zA-Z]+\//, '')
+  // retrieve package name after first slash. E.g. @some-org/mypkg -> mypkg
+  const pkgDirname = syncPackageName.replace(/@[0-9a-zA-Z-]+\//, '')
   syncPackageJson = require(path.resolve(packagesDir, pkgDirname, 'package.json'))
 } catch (err) {
   console.log(chalk.red(`package "${syncPackageName}" was not found`))
