@@ -14,7 +14,7 @@ npm install -g lerna-sync-version
 ## Usage
 
 ```bash
-$ lerna_sync_version [lerna-package-name]
+$ lerna-sync-version [lerna-package-name]
 ```
 
 ### Examples
@@ -24,7 +24,7 @@ Sync a package version with all other lerna packages in monorepo:
 ```bash
 $ cd monorepo/
 
-$ lerna_sync_version @acme/foobar
+$ lerna-sync-version @acme/foobar
 ```
 
 Sync current directory package version with all other lerna packages in monrepo:
@@ -32,7 +32,7 @@ Sync current directory package version with all other lerna packages in monrepo:
 ```bash
 $ cd monorepo/packges/foobar/
 
-$ lerna_sync_version
+$ lerna-sync-version
 ```
 
 ## License

@@ -1,6 +1,6 @@
 {
   "name": "lerna-sync-version",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Sync version of lerna packages locally.",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,8 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "test": "echo 'todo'"
+    "test": "echo 'todo'",
+    "lint": "standard --fix index.js"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,9 @@
     "url": "https://github.com/miguelmota/lerna-sync-version/issues"
   },
   "homepage": "https://github.com/miguelmota/lerna-sync-version",
-  "devDependencies": {},
+  "devDependencies": {
+    "standard": "^16.0.3"
+  },
   "engines": {
     "node": ">= 7.6.0"
   },

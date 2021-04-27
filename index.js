@@ -67,6 +67,10 @@ const getDirectories = source => {
 const packages = getDirectories(packagesDir)
 packages.forEach(pkg => {
   const filepath = path.resolve(packagesDir, pkg, 'package.json')
+  const exists = fs.existsSync(filepath)
+  if (!exists) {
+    return
+  }
   const stat = fs.statSync(filepath)
   if (!stat.isFile) {
     return
